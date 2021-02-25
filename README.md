@@ -2,8 +2,8 @@
 Aplição desenvolvida durante a semana da quarta edição da Next Level Week, promovida pela [Rocketseat](https://rocketseat.com.br/).
 
 ## Preview
-![Screenshot](./public/screenshots/screen1.png)
-![Screenshot](./public/screenshots/screen2.png)
+<img src="./assets/images/screen1.png" width="800" />
+<img src="./assets/images/screen2.png" width="800" />
 
 # Como funciona:
 É um método criativo baseado na técnica de gestão de tempo (Pomodoro), em que é iniciado um ciclo de 25 minutos pelo o usuário, para administrar suas atividades ao longo do dia.
