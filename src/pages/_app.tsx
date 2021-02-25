@@ -7,10 +7,11 @@ function MyApp({ Component, pageProps }) {
 
   //tudo que for fixo vai aqui
   return (
-    <ChallengesProvider>
 
+    <ChallengesProvider>
       <Component {...pageProps} />
     </ChallengesProvider>
+
 
   )
 }
