@@ -23,8 +23,6 @@
 
 .countdownContainer > div span {
     flex: 1;
-
-
 }
 .countdownContainer > div span:first-child {
     border-right:  1px solid #f0f1f3;
@@ -104,3 +102,18 @@
     color: var(--text);
     cursor: not-allowed;
 }
+
+
+/* responsive */
+
+@media(max-width: 425px) {
+    .countdownButton {
+        margin-bottom: 1rem;
+    }
+    }
+
+    @media(max-width: 320px) {
+        .countdownContainer > div span {
+            font-size: 6rem;
+        }
+    }

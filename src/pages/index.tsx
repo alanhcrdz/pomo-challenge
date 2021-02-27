@@ -19,7 +19,6 @@ interface HomeProps {
 }
 
 export default function Home(props: HomeProps) {
-  console.log(props);
 
   return (
     <ChallengesProvider
@@ -35,8 +34,6 @@ export default function Home(props: HomeProps) {
         <ExperienceBar />
 
         <CountdownProvider>
-
-
 
           <section>
             <div>

@@ -22,7 +22,7 @@ interface ChallengesContextData {
     levelUp: () => void;
     startNewChallenge: () => void;
     resetChallenge: () => void;
-    closeLevelUpModal: () => void
+    closeLevelUpModal: () => void;
 
 
 

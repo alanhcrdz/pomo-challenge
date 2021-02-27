@@ -15,3 +15,16 @@
     gap: 6.25rem;
     align-content: center;
 }
+
+@media(max-width: 425px) {
+    .container section {
+        display: inline;
+    }
+}
+
+@media(max-width: 320px) {
+    .container section {
+        max-width: 320px;
+        width: 100%;
+    }
+}

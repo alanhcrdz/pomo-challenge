@@ -36,3 +36,12 @@ span.currentExperience {
     transform: translateX(50%);
 
 }
+
+
+/* responsive */
+
+/* @media(max-width: 425px) {
+    .experienceBar {
+        
+    }
+} */

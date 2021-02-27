@@ -30,3 +30,24 @@
 .profileContainer div p img {
     margin-right: 0.5rem;
 } 
+
+
+/* Responsive */
+@media(max-width: 425px) {
+    .profileContainer {
+        justify-content: center;
+        margin-top: 2.5rem;
+    
+    }
+    .profileContainer > img {
+        width: 4.5rem;
+        height: 4.5rem;
+        border-radius: 50%;
+    
+    }
+    .profileContainer div {
+        text-align: center;
+        margin-left: 1.5rem;
+    }
+    
+}
