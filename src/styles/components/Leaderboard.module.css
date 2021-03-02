@@ -1,0 +1,13 @@
+.container {
+    height: 100%;
+    margin: auto;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h2 {
+    color: var(--title);
+}

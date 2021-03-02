@@ -9,7 +9,7 @@ export function AppDescription() {
             <h2>Exercite-se!</h2>
 
             <p>Pomo Challenge é um método eficiente para você que passa muitas horas
-            na frente do computador, principalmente em tempos de Home Office e não percebe que o tempo passa tão rápido.
+            na frente do computador, principalmente em tempos de Home Office e não percebe que as horas passam tão rápido.
             Criado a partir da técnica de <a href="https://pt.wikipedia.org/wiki/T%C3%A9cnica_pomodoro" target="_blank">Pomodoro</a>  de <a href="https://francescocirillo.com/" target="_blank">Francesco Cirillo</a> , este método consiste em:
              </p>
             <ul>

@@ -43,29 +43,35 @@ export default function Login() {
                     <p>Bem-vindo(a)!</p>
                     <div className={styles.socialAuth}>
 
-                        <FontAwesomeIcon icon={faGithub} className={styles.icon} />
-                        <p>
-                            Faça Login com seu GitHub <br /> para começar
-                                </p>
+
+                        <p>Faça login para começar</p>
 
 
 
                     </div>
 
                     <div className={styles.inputContainer}>
-                        <button onClick={() => {
-
-                            signIn('github', { callbackUrl: `${url}/home` }); /* remove callbackUrl to choose a provider */
-                        }}>
-                            Continuar com GitHub
-                                    </button>
 
 
                         <button onClick={() => {
                             signIn('github', { callbackUrl: `${url}/home` }); /* remove callbackUrl to choose a provider */
                         }}>
-                            <FontAwesomeIcon icon={faArrowRight} /></button>
+                            Login com GitHub
+                        <FontAwesomeIcon icon={faGithub} className={styles.icon} />
+                        </button>
+
                     </div>
+
+                    <div className={styles.inputContainer}>
+                        <button onClick={() => {
+                            signIn('auth0', { callbackUrl: `${url}/home` }); /* remove callbackUrl to choose a provider */
+                        }}>
+                            Login com Auth0
+                        <FontAwesomeIcon icon={faArrowRight} className={styles.icon} />
+
+                        </button>
+                    </div>
+
 
 
                     {/*  {session && (

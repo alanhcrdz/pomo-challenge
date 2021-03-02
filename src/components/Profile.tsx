@@ -1,5 +1,5 @@
 import { useContext, useEffect } from 'react'
-import { signOut, useSession } from 'next-auth/client';
+import { useSession } from 'next-auth/client';
 import { ChallengesContext } from '../contexts/ChallengeContext'
 
 import styles from '../styles/components/Profile.module.css';
@@ -7,7 +7,6 @@ import { useRouter } from 'next/router';
 
 
 export function Profile() {
-    const url = process.env.REACT_APP_URL
     const { level } = useContext(ChallengesContext);
     const [session] = useSession();
     const router = useRouter();
@@ -31,11 +30,7 @@ export function Profile() {
                         <img src="icons/level.svg" alt="Level" />
                              Level {level}
                     </p>
-                    <button className={styles.logoutButton} onClick={() => {
-                        signOut({ callbackUrl: `${url}/` });
 
-                    }
-                    }>Sair</button>
                 </div>
 
             </>}

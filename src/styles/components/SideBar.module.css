@@ -1,0 +1,36 @@
+.container {
+    height: 100%;
+    
+}
+.sidenav {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+
+    width: 130px;
+    height: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: var(--white);
+
+}
+.icon:not(:active) {
+    color: var(--title);
+    cursor: pointer;
+    transition: color 200ms;
+    
+}
+
+.icon:hover {
+    color: var(--pomodoro);
+}
+.iconActive {
+    color: var(--pomodoro);
+}
+

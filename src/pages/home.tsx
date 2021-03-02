@@ -11,9 +11,7 @@ import { ChallengeBox } from '../components/ChallengeBox';
 import { CountdownProvider } from '../contexts/CountdownContext';
 import { ChallengesProvider } from '../contexts/ChallengeContext';
 import { AppDescription } from '../components/AppDescription';
-import { getSession, session, useSession } from 'next-auth/client';
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
+import SideBar from '../components/SideBar';
 
 
 interface HomeProps {
@@ -25,14 +23,8 @@ interface HomeProps {
 
 
 export default function Home(props: HomeProps) {
-  // const router = useRouter();
-  const [loading, session] = useSession();
 
-  /* useEffect(() => {
-    if (!loading && !session) {
-      router.push('/');
-    }
-  }, [session, loading, router]) */
+
 
 
 
@@ -48,9 +40,9 @@ export default function Home(props: HomeProps) {
           <title>Início | Pomo Challenge</title>
         </Head>
 
+        <SideBar />
+
         <ExperienceBar />
-
-
         <CountdownProvider>
           <section>
             <div>
@@ -64,7 +56,9 @@ export default function Home(props: HomeProps) {
             </div>
             <div>
               <AppDescription />
+
             </div>
+
           </section>
         </CountdownProvider>
 

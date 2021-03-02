@@ -1,8 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle, faTimes } from '@fortawesome/free-solid-svg-icons';
 
-import { useState, useEffect, useContext } from 'react'
-import { ChallengesContext } from '../contexts/ChallengeContext';
+import { useContext } from 'react'
 import { CountdownContext } from '../contexts/CountdownContext';
 import styles from '../styles/components/Countdown.module.css';
 
