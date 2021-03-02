@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckCircle, faTimes } from '@fortawesome/free-solid-svg-icons';
+
 import { useState, useEffect, useContext } from 'react'
 import { ChallengesContext } from '../contexts/ChallengeContext';
 import { CountdownContext } from '../contexts/CountdownContext';
@@ -56,6 +59,7 @@ export function Countdown() {
                                 className={`${styles.countdownButton} ${styles.countdownButtonActive}`}
                                 onClick={resetCountdown}
                             >
+                                <FontAwesomeIcon icon={faTimes} style={{ marginRight: 10 }} />
                                 Abandonar ciclo</button>
 
 
@@ -65,6 +69,8 @@ export function Countdown() {
                                     className={styles.countdownButton}
                                     onClick={startCountdown}
                                 >
+                                    <FontAwesomeIcon icon={faCheckCircle} style={{ marginRight: 10 }} />
+
                                     Iniciar um ciclo</button>
 
                             )}

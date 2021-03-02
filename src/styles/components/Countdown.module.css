@@ -43,6 +43,7 @@
     height: 5rem;
 
     margin-top: 2rem;
+    margin-bottom: 2rem;
 
     display: flex;
     align-items: center;
@@ -50,7 +51,7 @@
 
     border: 0;
     border-radius: 5px;
-    background: var(--blue);
+    background: var(--pomodoro);
     color: var(--white);
 
     font-size: 1.25rem;
@@ -59,7 +60,7 @@
 }
 .countdownButtonActive {
     background: var(--white);
-    color: var(--title);
+    color: var(--pomodoro);
 }
 /* This solution might work to disable the button when count reaches 0,
  however it's clever to keep a clean code doing short using :disabled attribute
@@ -88,7 +89,9 @@
 
 
 .countdownButton:not(:disabled):hover { /* new way of styling disabled! */
-    background: var(--blue-dark);
+    background: var(--white);
+    color: var(--pomodoro);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
 .countdownButtonActive:not(:disabled):hover {
     background: var(--red);

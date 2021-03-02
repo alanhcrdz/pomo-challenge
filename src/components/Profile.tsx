@@ -1,25 +1,57 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
+import { signOut, useSession } from 'next-auth/client';
 import { ChallengesContext } from '../contexts/ChallengeContext'
-import styles from '../styles/components/Profile.module.css'
+
+import styles from '../styles/components/Profile.module.css';
+import { useRouter } from 'next/router';
 
 
 export function Profile() {
-    const { level } = useContext(ChallengesContext)
+    const url = process.env.REACT_APP_URL
+    const { level } = useContext(ChallengesContext);
+    const [session] = useSession();
+    const router = useRouter();
+
+    useEffect(() => {
+        if (!session) {
+            router.push('/')
+        }
+    }, [session, router])
+
     return (
+
         <div className={styles.profileContainer}>
-            <img src="https://github.com/alanhcrdz.png" alt="Alan Harlen" />
 
+            {session && <>
+                <img src={session.user.image} alt={session.user.name} />
 
-            <div>
-                <strong>Alan Harlen</strong>
+                <div>
+                    <strong>{session.user.name}</strong>
+                    <p>
+                        <img src="icons/level.svg" alt="Level" />
+                             Level {level}
+                    </p>
+                    <button className={styles.logoutButton} onClick={() => {
+                        signOut({ callbackUrl: `${url}/` });
 
-                <p>
-                    <img src="icons/level.svg" alt="Level" />
-                    Level {level}
-                </p>
-            </div>
+                    }
+                    }>Sair</button>
+                </div>
+
+            </>}
+            {/*  {!session && <>
+                <p>Not signed in...</p>
+
+            </>} */}
 
         </div>
 
+
+
+
     )
+
+
+
+
 }

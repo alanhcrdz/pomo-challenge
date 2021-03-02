@@ -1,0 +1,73 @@
+
+
+.container {
+    background: var(--white);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container img {
+    width: 400px;
+}
+
+.container > h2 {
+    color: var(--pomodoro);
+    font-size: 4rem;
+    font-style: italic;
+}
+
+.container > p {
+    color: var(--pomodoro);
+    font-size: 2rem;
+}
+
+.socialAuth {
+    padding: 1.2rem;
+    display: flex;
+}
+
+.socialAuth p {
+    color: var(--title);
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.icon {
+    color: var(--title);
+
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+
+.inputContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputContainer button {
+    padding: 1rem;
+    border: 0;
+    background-color: var(--transparency);
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    text-align: center;
+    transition: background 400ms;
+    color: var(--white);
+}
+
+.inputContainer button:hover {
+    background: var(--pomodoro);
+}
+.inputContainer button:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+}
+
+.inputContainer button:last-child {
+    background: var(--green);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}

@@ -1,6 +1,6 @@
 import styles from '../styles/components/ExperienceBar.module.css';
 
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { ChallengesContext } from '../contexts/ChallengeContext';
 
 

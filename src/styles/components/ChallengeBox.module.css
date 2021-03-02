@@ -18,6 +18,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .challengeNotActive strong {
@@ -77,6 +78,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    
 }
 
 .challengeActive footer button {
@@ -106,8 +108,27 @@
     filter: brightness(0.9);
 }
 
+/* responsive */
+
+@media(max-width: 425px) {
+    .challengeBoxContainer {
+        margin-bottom: 30px;
+    }
+    .challengeActive footer button {
+        margin-top: 20px;
+    }
+
+    .challengeActive img {
+        width: 100px;
+    }
+}
+
 
 @media(max-width: 320px) {
+
+    .challengeBoxContainer {
+        margin-bottom: 30px;
+    }
 
     .challengeNotActive strong {
         font-size: 1rem;

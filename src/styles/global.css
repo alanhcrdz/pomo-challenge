@@ -17,6 +17,8 @@
     --blue: #5965E0;
     --blue-dark: #4953B8;
     --blue-twitter: #2AA9E0;
+    --pomodoro: #ff6347;
+    --transparency: #00000070
 }
 
 @media(max-width: 1080px) {
