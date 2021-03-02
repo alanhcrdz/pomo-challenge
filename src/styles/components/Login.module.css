@@ -52,16 +52,41 @@
     padding: 1rem;
     border: 0;
     border-radius: 5px;
-    background-color: var(--transparency);
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+   
     text-align: center;
-    transition: background 400ms;
+    transition: box-shadow 400ms;
     color: var(--white);
     margin-bottom: 20px;
 }
 
 .inputContainer button:hover {
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+
+/* login buttons */
+
+.google {
+    background: #4285F4
+}
+.github {
+    background: black
+}
+.auth0 {
     background: var(--pomodoro);
 }
 
 
+@media(max-width: 425px) {
+
+    .container img {
+        width: 200px;
+    }
+
+    .container > h2 {
+        font-size: 2rem;
+    }
+    .container > p {
+        font-size: 1rem;
+    }
+
+}

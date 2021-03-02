@@ -24,17 +24,11 @@ export default function SideBar() {
         <div className={styles.container}>
             <div className={styles.sidenav}>
                 <img src="/pomotransparent.png" alt="Logo" width="60px" />
-
-
-
                 <FontAwesomeIcon
                     className={`${styles.icon} `}
                     icon={faHome} size='2x'
                     onClick={() => {
                         router.push('/home')
-
-
-
                     }} />
 
                 <FontAwesomeIcon

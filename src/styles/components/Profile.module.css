@@ -35,6 +35,8 @@
 /* Responsive */
 @media(max-width: 425px) {
     .profileContainer {
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
         margin-top: 2.5rem;
     
@@ -47,7 +49,7 @@
     }
     .profileContainer div {
         text-align: center;
-        margin-left: 1.5rem;
+        margin-left: 0;
     }
     
 }

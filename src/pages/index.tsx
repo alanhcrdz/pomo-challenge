@@ -1,6 +1,6 @@
 import styles from '../styles/components/Login.module.css';
 import Head from 'next/head';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -11,7 +11,13 @@ import { signIn, useSession } from 'next-auth/client';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 
-export default function Login() {
+
+//React loadding
+import ReactLoading from 'react-loading';
+
+
+export default function Login({ type, color }) {
+
     const [session, loading] = useSession();
     const router = useRouter();
     const url = process.env.REACT_APP_URL
@@ -26,7 +32,7 @@ export default function Login() {
 
     if (loading) {
         return <div className={styles.container}>
-            <p>Carregando...</p>
+            <ReactLoading type='bars' color="#ff6347" height={70} width={70} />
         </div>
     }
 
@@ -50,10 +56,18 @@ export default function Login() {
 
                     </div>
 
+                    <div className={`${styles.inputContainer}`}>
+
+                        <button className={styles.google} onClick={() => {
+                            signIn('google', { callbackUrl: `${url}/home` }); /* remove callbackUrl to choose a provider */
+                        }}>
+                            Login com Google
+                        <FontAwesomeIcon icon={faGoogle} className={styles.icon} />
+                        </button>
+                    </div>
+
                     <div className={styles.inputContainer}>
-
-
-                        <button onClick={() => {
+                        <button className={styles.github} onClick={() => {
                             signIn('github', { callbackUrl: `${url}/home` }); /* remove callbackUrl to choose a provider */
                         }}>
                             Login com GitHub
@@ -63,7 +77,7 @@ export default function Login() {
                     </div>
 
                     <div className={styles.inputContainer}>
-                        <button onClick={() => {
+                        <button className={styles.auth0} onClick={() => {
                             signIn('auth0', { callbackUrl: `${url}/home` }); /* remove callbackUrl to choose a provider */
                         }}>
                             Login com Auth0
@@ -71,6 +85,8 @@ export default function Login() {
 
                         </button>
                     </div>
+
+
 
 
 
